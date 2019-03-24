@@ -1,0 +1,79 @@
+.svg-background {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  background-image: url('src/assets/images/home_background1.svg');
+}
+
+.match-parent {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+}
+
+.img-center {
+  display: flex;
+  margin: 0 auto;
+}
+
+/*  Navbar Style */
+.navbar-tempest {
+    background-color: #019D6E;
+    box-shadow: 0px 1px 5px #999;
+}
+/* change the brand and text color */
+.navbar-tempest .navbar-brand,
+.navbar-tempest .navbar-text {
+    color: rgba(255,255,255,.8);
+}
+/* change the link color */
+.navbar-tempest .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+}
+/* change the color of active or hovered links */
+.navbar-tempest .nav-item.active .nav-link,
+.navbar-tempest .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+/* Navbar logo style */
+.navbar-tempest-logo {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+/* Green Button Style */
+.btn-green {
+  color: #ffffff;
+  background-color: #019D6E;
+  border-color: #019D6E;
+}
+.btn-green:hover,
+.btn-green:focus,
+.btn-green:active,
+.btn-green.active {
+  color: #ffffff;
+  background-color: #01845c;
+  border-color: #016a4a;
+}
+.btn-green.disabled:hover,
+.btn-green.disabled:focus,
+.btn-green.disabled:active,
+.btn-green.disabled.active,
+.btn-green[disabled]:hover,
+.btn-green[disabled]:focus,
+.btn-green[disabled]:active,
+.btn-green[disabled].active,
+fieldset[disabled] .btn-green:hover,
+fieldset[disabled] .btn-green:focus,
+fieldset[disabled] .btn-green:active,
+fieldset[disabled] .btn-green.active {
+  color: #ffffff;
+  background-color: #019D6E;
+  border-color: #019D6E;
+}

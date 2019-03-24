@@ -1,0 +1,39 @@
+<!--Navbar-->
+<app-navbar></app-navbar>
+
+<br>
+
+<div class="container">
+  <!--Carousel-->
+  <ngb-carousel *ngIf="promotions" [showNavigationArrows]="false">
+    <ng-template ngbSlide *ngFor="let promotion of promotions">
+      <img [src]="promotion.getDashboardImage()" alt="{{ promotion.getName() }}" class=img-center style='height: 100%; width: 100%; object-fit: contain;'>
+      <div class="carousel-caption">
+        <h3>{{ promotion.getName() }}</h3>
+        <p>{{ promotion.getDescription() }}</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <br>
+  <br>
+
+  <!--New Arrivals-->
+  <div class="shadow-sm p-4 mb-5 bg-white" style='border-radius: 10px;'>
+    <h3>New Arrivals</h3>
+    <div class="card-columns">
+      <app-productcard *ngFor="let product of products" [product]="product">
+      </app-productcard>
+    </div>
+  </div>
+
+  <!--Monthly Top Purchases-->
+  <div class="shadow-sm p-4 mb-5 bg-white" style='border-radius: 10px;'>
+    <h3>Monthly Top Purchases</h3>
+    <div class="card-columns">
+      <app-productcard *ngFor="let product of products" [product]="product">
+      </app-productcard>
+    </div>
+  </div>
+
+</div>

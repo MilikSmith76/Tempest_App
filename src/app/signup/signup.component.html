@@ -1,0 +1,89 @@
+<div class="svg-background">
+  <div class="container">
+    <div class="row match-parent align-items-center">
+      <div class="col">
+      </div>
+      <div class="col">
+        <div class='jumbotron' style="padding: 30px;">
+          <h1> Sign Up </h1>
+          <br>
+          <form autocomplete="off" (ngSubmit)="onSubmit()" #signUpForm="ngForm">
+
+            <!--Email-->
+            <div class="form-group">
+              <label for="text">Email</label>
+              <input type="text" class="form-control" id="email"
+               required email
+               [(ngModel)]="model.email" name="email"
+               #email="ngModel">
+               <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+                 <div *ngIf="email.errors.required">
+                   Email is required.
+                 </div>
+                 <div *ngIf="email.errors.email">
+                   This has to be an email.
+                 </div>
+               </div>
+             </div>
+
+            <!--First Name-->
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" class="form-control" id="firstName"
+               required
+               [(ngModel)]="model.firstName" name="firstName"
+               #firstName="ngModel">
+               <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+                 First Name is required.
+               </div>
+            </div>
+
+            <!--Last Name-->
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" class="form-control" id="lastName"
+               required
+               [(ngModel)]="model.lastName" name="lastName"
+               #lastName="ngModel">
+               <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+                 Last Name is required.
+               </div>
+            </div>
+
+            <!--Password-->
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="text" class="form-control" id="password"
+               required minlength="6"
+               [(ngModel)]="model.password" name="password"
+               #password="ngModel">
+               <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                 <div *ngIf="password.errors.required">
+                   Password is required.
+                 </div>
+                 <div *ngIf="password.errors.minlength">
+                   Password must have at least 6 characters.
+                 </div>
+               </div>
+            </div>
+
+            <!--Confirm Password-->
+            <div class="form-group">
+              <label for="confirm">Confirm Password</label>
+              <input type="text" class="form-control" id="confirm" name="confirm" (change)="true" #confirm>
+              <div *ngIf="confirm.value!='' && confirm.value!=password.value" class="alert alert-danger">
+                The passwords do not match.
+              </div>
+            </div>
+
+            <!--Submit Button-->
+            <button [disabled]="!signUpForm.form.valid || confirm.value!=password.value" type="submit" class="btn btn-success">Submit</button>
+
+          </form>
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="svg-background">
+  <div class="container">
+    <div class="row match-parent align-items-center">
+      <div class="col">
+      </div>
+      <div class="col">
+        <div class='jumbotron' style="padding: 30px;">
+          <h1> Log in </h1>
+          <br>
+          <form autocomplete="off" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+
+            <!--Email-->
+            <div class="form-group">
+              <label for="text">Email</label>
+              <input type="text" class="form-control" id="email"
+               [(ngModel)]="email" name="email">
+             </div>
+
+             <!--Password-->
+             <div class="form-group">
+               <label for="password">Password</label>
+               <input type="text" class="form-control" id="password"
+                [(ngModel)]="password" name="password">
+             </div>
+
+            <!--Submit Button-->
+            <button type="submit" class="btn btn-success">Submit</button>
+
+          </form>
+        </div>
+      </div>
+      <div class="col">
+      </div>
+    </div>
+  </div>
+</div>
