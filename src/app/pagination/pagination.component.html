@@ -1,0 +1,12 @@
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item"><a class="page-link" style="color: #019D6E;" (click)="onPrev()">Previous</a></li>
+
+    <li class="page-item" *ngFor="let page of createPages()">
+      <a  *ngIf="currentPage !== page" class="page-link" style="color: #019D6E;" (click)="onPage(page)">{{page}}</a>
+      <a  *ngIf="currentPage === page"class="page-link" style="color: white; background-color: #019D6E;" (click)="onPage(page)">{{page}}</a>
+    </li>
+
+    <li class="page-item"><a class="page-link" style="color: #019D6E;" (click)="onNext()">Next</a></li>
+  </ul>
+</nav>

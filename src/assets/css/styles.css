@@ -47,6 +47,12 @@
   border-radius: 5px;
 }
 
+/* Navbar Right alignment of items */
+.navbar-tempest-right {
+  margin-left:auto;
+  margin-right:0;
+}
+
 /* Green Button Style */
 .btn-green {
   color: #ffffff;
@@ -76,4 +82,23 @@ fieldset[disabled] .btn-green.active {
   color: #ffffff;
   background-color: #019D6E;
   border-color: #019D6E;
+}
+
+select.btn-green {
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.dropdown-option {
+  background: white;
+  color: black;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.page-link {
+  color: #019D6E;
 }

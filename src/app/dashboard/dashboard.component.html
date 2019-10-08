@@ -1,16 +1,20 @@
 <!--Navbar-->
-<app-navbar></app-navbar>
+<app-navbar [homeActive]="true"></app-navbar>
 
 <br>
 
 <div class="container">
   <!--Carousel-->
-  <ngb-carousel *ngIf="promotions" [showNavigationArrows]="false">
+  <ngb-carousel *ngIf="promotions" [showNavigationArrows]="true" [showNavigationIndicators]="false">
     <ng-template ngbSlide *ngFor="let promotion of promotions">
-      <img [src]="promotion.getDashboardImage()" alt="{{ promotion.getName() }}" class=img-center style='height: 100%; width: 100%; object-fit: contain;'>
+      <div class="picsum-img-wrapper">
+        <img [src]="promotion.getDashboardImage()" alt="{{ promotion.getName() }}" class=img-center style='height: 100%; width: 100%; object-fit: contain; border-radius: 10px;'>
+      </div>
       <div class="carousel-caption">
         <h3>{{ promotion.getName() }}</h3>
         <p>{{ promotion.getDescription() }}</p>
+        <a class="btn-green btn-lg" style="color:#ffffff;"> View </a>
+        <br>
       </div>
     </ng-template>
   </ngb-carousel>

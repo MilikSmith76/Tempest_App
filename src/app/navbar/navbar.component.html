@@ -7,22 +7,22 @@
 
   <!--Links-->
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+    <ul class="nav navbar-nav">
+      <li class="{{ homeActive ? navActive : navNonActive }}">
         <a routerLink="/dashboard" class="nav-link">Home</a>
       </li>
 
-      <li class="nav-item">
-        <a routerLink="/dashboard" class="nav-link">Products</a>
+      <li class="{{ productActive ? navActive : navNonActive }}">
+        <a routerLink="/products" class="nav-link">Products</a>
       </li>
 
-      <li class="nav-item">
-        <a routerLink="/dashboard" class="nav-link">Promotions</a>
+      <li class="{{ promotionActive ? navActive : navNonActive }}">
+        <a routerLink="/promotion" class="nav-link">Promotions</a>
       </li>
     </ul>
 
     <!--Registration Links-->
-    <ul class="navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-tempest-right">
       <li class="nav-item">
         <a routerLink="/signup" class="nav-link">Sign up</a>
       </li>

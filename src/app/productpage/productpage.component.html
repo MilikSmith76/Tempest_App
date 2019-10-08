@@ -1,0 +1,33 @@
+<!--Navbar-->
+<app-navbar></app-navbar>
+
+<br>
+
+<div class="container">
+  <div class="shadow-sm p-4 mb-5 bg-white" style='border-radius: 10px;'>
+    <div class="row">
+      <div class="col">
+        <img src="{{ product.getImageFile() }}" class="card-img-top" alt="...">
+      </div>
+      <div class="col">
+        <h1>{{ product.getName() }}</h1>
+        <br>
+        <h3> ${{ product.getPrice() }}</h3>
+        <br>
+        <p>{{ product.getDescription() }}</p>
+        <br>
+        <a routerLink='/{{product.getURL()}}' class="btn-green btn-lg" style="color:#ffffff;">Buy</a>
+      </div>
+    </div>
+  </div>
+
+  <!--Similar Products-->
+  <div class="shadow-sm p-4 mb-5 bg-white" style='border-radius: 10px;'>
+    <h3>Similar Products</h3>
+    <div class="card-columns">
+      <app-productcard *ngFor="let product of products" [product]="product">
+      </app-productcard>
+    </div>
+  </div>
+
+</div>

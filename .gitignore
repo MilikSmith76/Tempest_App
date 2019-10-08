@@ -37,3 +37,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Image files
+/src/assets/images/banner
+/src/assets/images/dashboard
+/src/assets/images/product
