@@ -11,6 +11,10 @@
   height: 100%;
 }
 
+.txt-center {
+  text-align: center;
+}
+
 .btn-center {
   display: flex;
   justify-content: center;

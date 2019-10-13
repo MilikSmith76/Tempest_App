@@ -9,6 +9,10 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductboardComponent } from './productboard/productboard.component';
 import { PromotionboardComponent } from './promotionboard/promotionboard.component';
 import { ProductpageComponent } from './productpage/productpage.component';
+import { PromotionpageComponent } from './promotionpage/promotionpage.component';
+import { ProductcreateComponent } from './productcreate/productcreate.component';
+import { PromotioncreateComponent } from './promotioncreate/promotioncreate.component';
+import { AddpromotionproductComponent } from './addpromotionproduct/addpromotionproduct.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +21,13 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'products', component: ProductboardComponent },
   { path: 'promotion', component: PromotionboardComponent },
+  { path: 'product/create', component: ProductcreateComponent },
+  { path: 'promotion/create', component: PromotioncreateComponent },
+  // { path: 'product/modify/:productId', component: ProductcreateComponent },
+  // { path: 'promotion/modify/:promotionId', component: PromotioncreateComponent },
   { path: 'product/:productId', component: ProductpageComponent },
+  { path: 'promotion/:promotionId', component: PromotionpageComponent },
+  { path: 'addpromotionproduct', component: AddpromotionproductComponent },
 ];
 
 @NgModule({

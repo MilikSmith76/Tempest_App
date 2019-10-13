@@ -7,13 +7,13 @@
 
   <div class="row">
     <div class="col shadow-sm p-4 mb-5 bg-white" style="border-radius: 10px; margin-left: 20px;">
-      <div class="card" *ngFor="let promotion of getPagePromotions()">
+      <div class="card" style="margin-bottom: 10px;" *ngFor="let promotion of getPagePromotions()">
         <img src="{{ promotion.getDashboardImage() }}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{ promotion.getName() }}</h5>
           <h5 class="card-text">{{ promotion.getDescription() | slice:0:40 }} {{ promotion.getDescription().length < 40 ? '':'...' }} </h5>
           <br>
-          <a class="btn-green btn-lg" style="color:#ffffff;">View</a>
+          <a routerLink="\promotion\{{ promotion.getId() }}"class="btn-green btn-lg" style="color:#ffffff;">View</a>
         </div>
       </div>
 

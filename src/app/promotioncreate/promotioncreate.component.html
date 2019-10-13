@@ -1,0 +1,74 @@
+<app-navbar></app-navbar>
+
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col shadow-sm p-4 mb-5 bg-white" style="border-radius: 10px; margin-left: 20px;">
+      <h2> New Promotion </h2>
+
+      <br>
+
+      <br>
+
+      <form autocomplete="off" (ngSubmit)="onSubmit()" #createPromotionForm="ngForm">
+
+        <!--Promotion Name-->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Name</span>
+          </div>
+          <input type="text" class="form-control" id="name"
+           required name
+           [(ngModel)]="model.name" name="name"
+           #name="ngModel">
+        </div>
+
+        <!--Promotion Description-->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Description</span>
+          </div>
+          <input type="text" class="form-control" id="description"
+           required description
+           [(ngModel)]="model.description" name="description"
+           #description="ngModel">
+        </div>
+
+        <!--Promotion Dashboard Image-->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" for="text">Dashboard Image</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="dashboardImage"
+             required dashboardImage
+             [(ngModel)]="model.dashboardImage" name="dashboardImage"
+             #dashboardImage="ngModel">
+            <label *ngIf="model.dashboardImage == blank" class="custom-file-label" for="dashboardImage"> Choose File </label>
+            <label *ngIf="model.dashboardImage != blank" class="custom-file-label" for="dashboardImage"> {{ model.dashboardImage }}</label>
+          </div>
+        </div>
+
+        <!--Promotion Banner Image-->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" for="text">Banner Image</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" id="bannerImage"
+             required bannerImage
+             [(ngModel)]="model.bannerImage" name="bannerImage"
+             #bannerImage="ngModel">
+            <label *ngIf="model.bannerImage == blank" class="custom-file-label" for="bannerImage"> Choose File </label>
+            <label *ngIf="model.bannerImage != blank" class="custom-file-label" for="bannerImage"> {{ model.bannerImage }}</label>
+          </div>
+        </div>
+
+        <!--Submit Button-->
+        <button [disabled]="!createPromotionForm.form.valid" type="submit" class="btn btn-success">Submit</button>
+
+      </form>
+    </div>
+  </div>
+</div>

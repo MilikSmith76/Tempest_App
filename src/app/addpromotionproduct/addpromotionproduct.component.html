@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col shadow-sm p-4 mb-5 bg-white" style="border-radius: 10px; margin-left: 20px;">
+      <h2> Add Product to Promotion </h2>
+
+      <br>
+      <br>
+
+      <form autocomplete="off" (ngSubmit)="onSubmit()" #additionForm="ngForm">
+
+        <!--Product Name-->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Name</span>
+          </div>
+          <label  class="form-control" for="productId"> {{ product.getName() }} </label>
+          <input type="text" style="display: none;" id="productId"
+           required productId
+           [(ngModel)]="productId" name="productId">
+        </div>
+
+        <!--Promotion-->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Promotion</span>
+          </div>
+          <select class="custom-select" id="promotionId"
+           required promotionId
+           [(ngModel)]="promotionId" name="promotionId">
+            <option *ngFor="let promotion of promotions" value="{{ promotion.getId() }}">{{ promotion.getName() }}</option>
+          </select>
+        </div>
+
+        <!--Product Dicount Price-->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Discount Price</span>
+          </div>
+          <input type="number" class="form-control" id="discount"
+           required discount
+           [(ngModel)]="discount" name="discount">
+        </div>
+
+        <!--Submit Button-->
+        <button [disabled]="!additionForm.form.valid" type="submit" class="btn btn-success">Submit</button>
+
+      </form>
+    </div>
+  </div>
+</div>

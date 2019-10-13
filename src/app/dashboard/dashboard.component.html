@@ -13,7 +13,7 @@
       <div class="carousel-caption">
         <h3>{{ promotion.getName() }}</h3>
         <p>{{ promotion.getDescription() }}</p>
-        <a class="btn-green btn-lg" style="color:#ffffff;"> View </a>
+        <a routerLink="/promotion/{{ promotion.getId() }}" class="btn-green btn-lg" style="color:#ffffff;"> View </a>
         <br>
       </div>
     </ng-template>
@@ -24,7 +24,7 @@
 
   <!--New Arrivals-->
   <div class="shadow-sm p-4 mb-5 bg-white" style='border-radius: 10px;'>
-    <h3>New Arrivals</h3>
+    <h3 class="txt-center">New Arrivals</h3>
     <div class="card-columns">
       <app-productcard *ngFor="let product of products" [product]="product">
       </app-productcard>
@@ -33,7 +33,7 @@
 
   <!--Monthly Top Purchases-->
   <div class="shadow-sm p-4 mb-5 bg-white" style='border-radius: 10px;'>
-    <h3>Monthly Top Purchases</h3>
+    <h3 class="txt-center">Monthly Top Purchases</h3>
     <div class="card-columns">
       <app-productcard *ngFor="let product of products" [product]="product">
       </app-productcard>

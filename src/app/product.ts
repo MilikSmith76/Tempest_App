@@ -33,8 +33,4 @@ export class Product {
     return this.price;
   }
 
-  getURL() {
-    return "product/" + this.id;
-  }
-
 }

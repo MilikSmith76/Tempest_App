@@ -23,7 +23,7 @@ export class LoginComponent {
 
   onSubmit() {
     this.isUser = this.potentialUser.getUser(this.email, this.password);
-    this.router.navigate(['/']);
+    this.router.navigate(['/dashboard']);
   }
 
 }

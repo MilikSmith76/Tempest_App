@@ -16,6 +16,10 @@ import { ProductboardComponent } from './productboard/productboard.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { PromotionboardComponent } from './promotionboard/promotionboard.component';
 import { ProductpageComponent } from './productpage/productpage.component';
+import { PromotionpageComponent } from './promotionpage/promotionpage.component';
+import { ProductcreateComponent } from './productcreate/productcreate.component';
+import { PromotioncreateComponent } from './promotioncreate/promotioncreate.component';
+import { AddpromotionproductComponent } from './addpromotionproduct/addpromotionproduct.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { ProductpageComponent } from './productpage/productpage.component';
     ProductboardComponent,
     PaginationComponent,
     PromotionboardComponent,
-    ProductpageComponent
+    ProductpageComponent,
+    PromotionpageComponent,
+    ProductcreateComponent,
+    PromotioncreateComponent,
+    AddpromotionproductComponent
   ],
   imports: [
     BrowserModule,

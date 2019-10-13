@@ -23,7 +23,7 @@ export class SignupComponent {
   onSubmit() {
     this.submitted = true;
     this.model.post();
-    this.router.navigate(['/']);
+    this.router.navigate(['/dashboard']);
   }
 
 }

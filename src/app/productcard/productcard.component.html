@@ -4,6 +4,6 @@
     <h5 class="card-title">{{ product.getName() }}</h5>
     <h5 class="card-text"> ${{ product.getPrice() }}</h5>
     <br>
-    <a routerLink='/{{product.getURL()}}' class="btn-green btn-lg" style="color:#ffffff;">Buy</a>
+    <a routerLink='/product/{{product.getId()}}' class="btn-green btn-lg" style="color:#ffffff;">Buy</a>
   </div>
 </div>
