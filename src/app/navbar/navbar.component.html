@@ -13,7 +13,7 @@
       </li>
 
       <li class="{{ productActive ? navActive : navNonActive }}">
-        <a routerLink="/products" class="nav-link">Products</a>
+        <a routerLink="/product" class="nav-link">Products</a>
       </li>
 
       <li class="{{ promotionActive ? navActive : navNonActive }}">
@@ -22,7 +22,7 @@
     </ul>
 
     <!--Registration Links-->
-    <ul class="nav navbar-nav navbar-tempest-right">
+    <ul class="nav navbar-nav navbar-tempest-right" *ngIf="user == null">
       <li class="nav-item">
         <a routerLink="/signup" class="nav-link">Sign up</a>
       </li>
@@ -31,5 +31,19 @@
       </li>
     </ul>
 
+    <ul class="nav navbar-nav navbar-tempest-right" *ngIf="user != null">
+
+      <li ngbDropdown class="nav-item">
+        <a ngbDropdownToggle class="nav-link" id="userDropdown">
+          {{ user.firstName + " " + user.lastName }}
+        </a>
+        <!-- <div class="" (mouseover)="showDropdown=true" (mouseout)="showDropdown=false"></div> -->
+
+        <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="userDropdown">
+          <button class="dropdown-item" ngbDropdownItem>Sign out</button>
+        </div>
+      </li>
+
+    </ul>
   </div>
 </nav>

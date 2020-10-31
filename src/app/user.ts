@@ -1,3 +1,17 @@
+export interface UserInterface {
+  status: number;
+  user: {
+    id: number;
+    balance: number;
+    email: string;
+    first_name: string;
+    last_name: string;
+    password: string;
+    ut_id: number;
+  };
+  empty: boolean;
+}
+
 export class User {
   public id: number;
   public email: string;

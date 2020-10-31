@@ -57,6 +57,17 @@
   margin-right:0;
 }
 
+/* Navbar dropdown menu */
+.navbar-drop-down {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background: #ffffff;
+  width: 13%;
+  text-align: center;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+}
+
 /* Green Button Style */
 .btn-green {
   color: #ffffff;
